@@ -196,9 +196,9 @@
                             <span id="changeText2">Ganhe 30% de desconto neste Natal. Aproveite!</span>
                           </p>
                           <script type="text/javascript">
-                            var text = ["Contrate o plano de R$100 por R$50 somente este mês. Imperdível!", "Venha conhecer a nova coleção de Verão e aproveite nossas ofertas!", "Ganhe 30% de desconto neste Natal. Aproveite!"];
-                            var counter = 0;
-                            var elem = document.getElementById("changeText2");
+                            var text2 = ["Contrate o plano de R$100 por R$50 somente este mês. Imperdível!", "Venha conhecer a nova coleção de Verão e aproveite nossas ofertas!", "Ganhe 30% de desconto neste Natal. Aproveite!"];
+                            var counter2 = 0;
+                            var elem2 = document.getElementById("changeText2");
                             setInterval(change2, 4000);
                             function change2() {
                               $(".balao__texto").css("transform","scale(0)");
@@ -206,9 +206,9 @@
                               setTimeout(function(){
                                 $(".balao__texto").css("transform","scale(1)");
                                 $(".balao__texto").css("opacity","1");
-                                elem.innerHTML = text[counter];
-                                counter++;
-                                if(counter >= text.length) { counter = 0; }
+                                elem2.innerHTML = text2[counter];
+                                counter2++;
+                                if(counter2 >= text2.length) { counter2 = 0; }
                               }, 500);
                             }
                           </script>
