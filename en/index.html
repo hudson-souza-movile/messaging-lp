@@ -96,48 +96,146 @@
       <span id="features-anchor"></span>
       <section id="features">
         <div class="container">
+          <img src="../img/icon-sms.png" alt="Ícone de balão">
           <h3 class="section-title">The complete solution for your company</h3>
+          <p>Communicate with your clients and employees anytime and anywhere</p>
           <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="features__item">
-                <img src="../img/icon-sms.png" alt="Ícone de balão">
-                <h4>SMS</h4>
-                <p>Communicate with your clients and employees anytime and anywhere</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="features__item">
-                <img src="../img/icon-voz.png" alt="Megafone">
-                <h4>Voice message</h4>
-                <p>Optimize your communication with automated mass calls for your customers</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-md-offset-0 col-sm-offset-3">
-              <div class="features__item">
-                <img src="../img/icon-email.png" alt="Ícone de balão">
-                <h4>E-mail</h4>
-                <p>The legendary, but even better.</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6 col-lg-offset-2 col-md-offset-2">
-              <div class="features__item">
-                <img src="../img/icon-bot.png" alt="Ícone de robô">
-                <h4>Chat Bots</h4>
-                <p>The most innovative customer service available today</p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-              <div class="features__item">
-                <img src="../img/icon-message.png" alt="Ícone de smartphone">
-                <h4>Smart message</h4>
-                <p>Interact with your clients in just one click</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="#more-anchor" class="cta">I want to know more</a>
+
+              <div class="col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-12 sms-corporativo">
+
+                <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                    <div class="features__item">
+                    <a href="javascript:" class="cta sms-active btn-corporativo">Corporate SMS</a>
+                    <a href="javascript:" class="cta sms-deactive btn-marketing">Marketing SMS</a>
+                    <script>
+                      $(".btn-marketing").click(function(){
+                        $(".sms-corporativo").fadeOut(500);
+                        setTimeout(function(){
+                          $(".sms-marketing").fadeIn(500);
+                        }, 500);
+                      });
+                    </script>
+                    <br><br>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-6">
+                    <div class="phone__underline">
+                      <div class="phone__container">
+                        <div class="phone__screen">
+                          <p class="balao__texto">
+                            <span id="changeText">Hello, your order #012345 is already on its way to the shipping address</span>
+                          </p>
+                          <script type="text/javascript">
+                            var text = ["Dear customer, avoid the delay of your account, activate the automatic debit now", "Dear customer, thank you for the partnership this year and Happy Holidays!", "Hello, your order #012345 is already on its way to the shipping address"];
+                            var counter = 0;
+                            var elem = document.getElementById("changeText");
+                            setInterval(change, 4000);
+                            function change() {
+                              $(".balao__texto").css("transform","scale(0)");
+                              $(".balao__texto").css("opacity","0");
+                              setTimeout(function(){
+                                $(".balao__texto").css("transform","scale(1)");
+                                $(".balao__texto").css("opacity","1");
+                                elem.innerHTML = text[counter];
+                                counter++;
+                                if(counter >= text.length) { counter = 0; }
+                              }, 500);
+                            }
+                          </script>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-6 text-left">
+                    <div class="lista">
+                      <ul>
+                        <li>Congratulations</li>
+                        <li>Thanks</li>
+                        <li>Inivitations</li>
+                        <li>Notices</li>
+                        <li>Reminders</li>
+                        <li>Billing</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div> <!-- col-md-6 -->
+
+              <div class="col-lg-offset-0 col-lg-12 col-md-offset-0 col-md-12 col-sm-12 sms-marketing">
+
+                <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                    <div class="features__item">
+                      <a href="javascript:" class="cta sms-deactive btn-corporativo">Corporate SMS</a>
+                      <a href="javascript:" class="cta sms-active btn-marketing">Marketing SMS</a>
+                      <script>
+                      $(".btn-corporativo").click(function(){
+                        $(".sms-marketing").fadeOut(500);
+                        setTimeout(function(){
+                          $(".sms-corporativo").fadeIn(500);
+                        }, 500);
+                      });
+                    </script>
+                      <br><br>
+                      <!-- <p>Alertas de Promoções e Descontos, Envio de Cupons de Descontos, Divulgação de eventos e lançamentos, Divulgação de produtos e Ações de relacionamento com clientes.</p> -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-6">
+                    <div class="phone__underline">
+                      <div class="phone__container">
+                        <div class="phone__screen">
+                          <p class="balao__texto">
+                            <span id="changeText2">Get 30% off this Christmas. Enjoy!</span>
+                          </p>
+                          <script type="text/javascript">
+                            var text2 = ["Hire the $100 plan for $50 only this month!", "Come and see the new summer collection and enjoy our offers!", "Get 30% off this Christmas. Enjoy!"];
+                            var counter2 = 0;
+                            var elem2 = document.getElementById("changeText2");
+                            setInterval(change2, 4000);
+                            function change2() {
+                              $(".balao__texto").css("transform","scale(0)");
+                              $(".balao__texto").css("opacity","0");
+                              setTimeout(function(){
+                                $(".balao__texto").css("transform","scale(1)");
+                                $(".balao__texto").css("opacity","1");
+                                elem2.innerHTML = text2[counter];
+                                counter2++;
+                                if(counter2 >= text2.length) { counter2 = 0; }
+                              }, 500);
+                            }
+                          </script>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-6 text-left">
+                    <div class="lista">
+                      <ul>
+                        <li>Promotions and Discounts Alerts</li>
+                        <li>Discount Coupons Sending</li>
+                        <li>Events and Openings Promotion</li>
+                        <li>Product Advertising</li>
+                        <li>Customer Relationship Actions</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div> <!-- col-md-6 -->
+
+          </div> <!-- row -->
+
+        </div> <!-- container -->
+          
+        <a href="#more-anchor" class="cta">quero saber mais</a>
       </section>
       <section id="depoimentos">
         <div class="container">
